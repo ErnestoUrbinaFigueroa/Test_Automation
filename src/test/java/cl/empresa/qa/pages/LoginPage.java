@@ -41,7 +41,7 @@ public class LoginPage {
 	}
 
 	public void assertLoginCorrecto() {
-		Assert.assertTrue(driver.findElement(validadorLoginCorrecto).getText().equals("Men� Rol: usuario"));
+		Assert.assertTrue(driver.findElement(validadorLoginCorrecto).getText().equals("Menú Rol: usuario"));
 	}
 
 	public void assertLoginIncorrecto() {

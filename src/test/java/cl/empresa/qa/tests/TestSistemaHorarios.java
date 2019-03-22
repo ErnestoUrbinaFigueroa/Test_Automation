@@ -22,7 +22,7 @@ public class TestSistemaHorarios {
 	private WebDriver driver;
 	private ExtentReports extent;
 	private ExtentTest test;
-	private static String SUBDIR = "Ambiente_Base_Ta\\";
+	private static String SUBDIR = "Ambiente_Base_Ta/";
 	private static Boolean TAKE_SS = true;
 
 	@BeforeSuite
@@ -36,7 +36,8 @@ public class TestSistemaHorarios {
 		// Selenium config
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("Empresa", "Tecnova");
-		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
@@ -50,7 +51,7 @@ public class TestSistemaHorarios {
 		test.log(LogStatus.INFO, "Prueba Login Correcto.-");
 		LoginPage login = new LoginPage(driver, test, TAKE_SS);
 
-		login.loginUser("eurbinaf", "XXXX", subDir);
+		login.loginUser("eurbinaf", "1507euf", subDir);
 		login.assertLoginCorrecto();
 	}
 

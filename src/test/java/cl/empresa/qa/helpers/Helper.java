@@ -26,8 +26,8 @@ import com.relevantcodes.extentreports.LogStatus;
  */
 public class Helper {
 
-	private static String PATH_EVIDENCE = "ExtentReports\\Evidence";
-	private static String DIR_EVIDENCE = ".\\Evidence\\";
+	private static String PATH_EVIDENCE = "ExtentReports/Evidence";
+	private static String DIR_EVIDENCE = "./Evidence/";
 
 	/**
 	 * <p>
@@ -100,7 +100,7 @@ public class Helper {
 				File imagen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 				// Mueve el archivo a la carga especificada con el respectivo nombre
 				FileUtils.copyFile(imagen,
-						new File(directory.getAbsolutePath() + "\\" + subDir + "\\" + imageName + ".png"));
+						new File(directory.getAbsolutePath() + "/" + subDir + "/" + imageName + ".png"));
 			} else {
 				// Se lanza la excepcion cuando no encuentre el directorio
 				throw new IOException("ERROR : La ruta especificada no es un directorio!");
@@ -136,7 +136,7 @@ public class Helper {
 		try {
 			if (directory.isDirectory()) {
 				test.log(LogStatus.INFO,
-						imageTitle + test.addScreenCapture(DIR_EVIDENCE + subDir + "\\" + imageName + ".png"));
+						imageTitle + test.addScreenCapture(DIR_EVIDENCE + subDir + "/" + imageName + ".png"));
 
 			} else {
 				// Se lanza la excepcion cuando no encuentre el directorio
