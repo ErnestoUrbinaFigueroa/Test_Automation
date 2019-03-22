@@ -51,7 +51,7 @@ public class TestSistemaHorarios {
 		test.log(LogStatus.INFO, "Prueba Login Correcto.-");
 		LoginPage login = new LoginPage(driver, test, TAKE_SS);
 
-		login.loginUser("eurbinaf", "1507euf", subDir);
+		login.loginUser("eurbinaf", "XXXX", subDir);
 		login.assertLoginCorrecto();
 	}
 
